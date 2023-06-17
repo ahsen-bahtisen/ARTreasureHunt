@@ -8,6 +8,8 @@
 import UIKit
 import SceneKit
 import ARKit
+import CoreLocation
+
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
@@ -20,13 +22,21 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         
         // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+        //sceneView.showsStatistics = true
         
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let scene = SCNScene(named: "art.scnassets/Rdiamond.scn")!
+        if let diamondNode = scene.rootNode.childNode(withName: "SketchUp", recursively: true)
+        {
+            diamondNode.position = SCNVector3(x: 0, y: 0, z: -0.1)
+            sceneView.scene.rootNode.addChildNode(diamondNode)
+        }
+       
+        /*// Create a new scene
+        let scene = SCNScene(named: "art.scnassets/diamond.scn")!
         
         // Set the scene to the view
-        sceneView.scene = scene
+        sceneView.scene = scene*/
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
