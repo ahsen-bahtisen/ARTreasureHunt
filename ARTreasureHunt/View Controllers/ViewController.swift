@@ -5,7 +5,7 @@
 //  Created by Ahsen Bahtışen on 14.06.2023.
 //
 
-import UIKit
+ import UIKit
  import SceneKit
  import ARKit
  import CoreLocation
@@ -109,36 +109,29 @@ protocol LocationManagerDelegate: AnyObject {
 
     
     //MARK: Methods
-     func addObject(treasure: Treasure, location: CLLocation) {
+      func addObject(treasure: Treasure, location: CLLocation) {
+          let distanceInMeters = userLocation?.distance(from: location) ?? 0
+          if distanceInMeters <= 1000 {
+              treasure.loadModel()
+              
+              guard let treasureNode = treasure.treasureNode else { return }
+              
+              // Set the position for each treasure
+              treasureNode.position = SCNVector3(x: Float(location.coordinate.latitude) * 0, y: Float(location.coordinate.longitude) * 0, z: -1.0)
+              
+              // The model is added to the scene
+              sceneView.scene.rootNode.addChildNode(treasureNode)
+              treasure.treasureNode = treasureNode
+          }
+              
+              // Add the treasure to the map
+              let annotation = MKPointAnnotation()
+              annotation.coordinate = location.coordinate
+              mapView.addAnnotation(annotation)
+              treasure.treasureAnnotation = annotation
          
-         treasure.loadModel()
-         
-         guard let treasureNode = treasure.treasureNode else { return }
-         
-         // Set the position for each treasure
-         switch treasures.firstIndex(of: treasure)! {
-         case 0:
-             treasureNode.position = SCNVector3(x: Float(location.coordinate.latitude) * 0, y: Float(location.coordinate.longitude) * 0, z: -1.0)
-         case 1:
-             treasureNode.position = SCNVector3(x: Float(location.coordinate.latitude) * 0.5, y: Float(location.coordinate.longitude) * 0.5, z: -1.0)
-         case 2:
-             treasureNode.position = SCNVector3(x: Float(location.coordinate.latitude), y: Float(location.coordinate.longitude), z: -1.0)
-         default:
-             treasureNode.position = SCNVector3(x: Float(location.coordinate.latitude), y: Float(location.coordinate.longitude), z: -1.0)
-         }
-         
-         //The model is added to the scene
-         sceneView.scene.rootNode.addChildNode(treasureNode)
-         treasure.treasureNode = treasureNode
-         
-         
-         // Add the treasure to the map
-         let annotation = MKPointAnnotation()
-         annotation.coordinate = location.coordinate
-         mapView.addAnnotation(annotation)
-         treasure.treasureAnnotation = annotation
-         
-     }
+      }
+
     
      //LocationManager functions
     func didUpdateLocation(_ location: CLLocation) {
