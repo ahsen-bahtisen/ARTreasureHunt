@@ -12,7 +12,10 @@
 		7A4ABC122A39A5F2007A9A6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4ABC112A39A5F2007A9A6F /* ViewController.swift */; };
 		7A4ABC152A39A5F2007A9A6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A4ABC132A39A5F2007A9A6F /* Main.storyboard */; };
 		7A4ABC172A39A5F3007A9A6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4ABC162A39A5F3007A9A6F /* Assets.xcassets */; };
-		7A4ABC1A2A39A5F3007A9A6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A4ABC182A39A5F3007A9A6F /* LaunchScreen.storyboard */; };
+		7A8FC98D2A40A6F300D9919A /* Treasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC98C2A40A6F300D9919A /* Treasure.swift */; };
+		7A8FC9DA2A45542100D9919A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9D92A45542000D9919A /* LocationManager.swift */; };
+		7A8FC9DC2A455EBE00D9919A /* TreasureLocations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9DB2A455EBE00D9919A /* TreasureLocations.swift */; };
+		7A8FC9DE2A456EC000D9919A /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8FC9DD2A456EC000D9919A /* ScoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +25,10 @@
 		7A4ABC112A39A5F2007A9A6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7A4ABC142A39A5F2007A9A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A4ABC162A39A5F3007A9A6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7A4ABC192A39A5F3007A9A6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7A8FC98C2A40A6F300D9919A /* Treasure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Treasure.swift; sourceTree = "<group>"; };
+		7A8FC9D92A45542000D9919A /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		7A8FC9DB2A455EBE00D9919A /* TreasureLocations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureLocations.swift; sourceTree = "<group>"; };
+		7A8FC9DD2A456EC000D9919A /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +64,12 @@
 				7A4ABC0D2A39A5F2007A9A6F /* AppDelegate.swift */,
 				7A4ABC0F2A39A5F2007A9A6F /* art.scnassets */,
 				7A4ABC112A39A5F2007A9A6F /* ViewController.swift */,
+				7A8FC9DD2A456EC000D9919A /* ScoreViewController.swift */,
+				7A8FC9DB2A455EBE00D9919A /* TreasureLocations.swift */,
+				7A8FC9D92A45542000D9919A /* LocationManager.swift */,
+				7A8FC98C2A40A6F300D9919A /* Treasure.swift */,
 				7A4ABC132A39A5F2007A9A6F /* Main.storyboard */,
 				7A4ABC162A39A5F3007A9A6F /* Assets.xcassets */,
-				7A4ABC182A39A5F3007A9A6F /* LaunchScreen.storyboard */,
 			);
 			path = ARTreasureHunt;
 			sourceTree = "<group>";
@@ -124,7 +133,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4ABC102A39A5F2007A9A6F /* art.scnassets in Resources */,
-				7A4ABC1A2A39A5F3007A9A6F /* LaunchScreen.storyboard in Resources */,
 				7A4ABC172A39A5F3007A9A6F /* Assets.xcassets in Resources */,
 				7A4ABC152A39A5F2007A9A6F /* Main.storyboard in Resources */,
 			);
@@ -137,8 +145,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A8FC98D2A40A6F300D9919A /* Treasure.swift in Sources */,
+				7A8FC9DA2A45542100D9919A /* LocationManager.swift in Sources */,
+				7A8FC9DC2A455EBE00D9919A /* TreasureLocations.swift in Sources */,
 				7A4ABC122A39A5F2007A9A6F /* ViewController.swift in Sources */,
 				7A4ABC0E2A39A5F2007A9A6F /* AppDelegate.swift in Sources */,
+				7A8FC9DE2A456EC000D9919A /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,14 +163,6 @@
 				7A4ABC142A39A5F2007A9A6F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7A4ABC182A39A5F3007A9A6F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7A4ABC192A39A5F3007A9A6F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -288,6 +292,7 @@
 				DEVELOPMENT_TEAM = 7LZM842DGK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses your camera";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,6 +322,7 @@
 				DEVELOPMENT_TEAM = 7LZM842DGK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app uses your camera";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app uses your location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
