@@ -32,8 +32,16 @@
                                     <action selector="mapClosed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="x4w-hS-bmx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipm-AO-AjH">
+                                <rect key="frame" x="28" y="47" width="72" height="62"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="profile"/>
+                                <connections>
+                                    <segue destination="yLG-Mu-mx3" kind="show" id="ulh-GZ-qt2"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4j-vF-WWd">
-                                <rect key="frame" x="165" y="127" width="60" height="21"/>
+                                <rect key="frame" x="195" y="127" width="0.0" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="FaM-9e-4Kn"/>
                                 </constraints>
@@ -41,24 +49,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipm-AO-AjH">
-                                <rect key="frame" x="28" y="47" width="54" height="49"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="profile"/>
-                                <connections>
-                                    <segue destination="yLG-Mu-mx3" kind="show" id="ulh-GZ-qt2"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="S4j-vF-WWd" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="165" id="4nz-XW-Xxt"/>
                             <constraint firstItem="Ipm-AO-AjH" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="28" id="6hl-c7-RvB"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
                             <constraint firstItem="vpV-x9-foW" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="KgM-JU-shI"/>
                             <constraint firstItem="S4j-vF-WWd" firstAttribute="centerX" secondItem="U0K-SW-4ec" secondAttribute="centerX" id="O8V-gw-hoz"/>
-                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="S4j-vF-WWd" secondAttribute="trailing" constant="165" id="V8u-ii-M4Z"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
                             <constraint firstItem="S4j-vF-WWd" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="80" id="Z7D-gk-PoA"/>
@@ -69,6 +67,7 @@
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="0e1-lE-B4e" secondAttribute="bottom" constant="-92" id="vze-oG-hRh"/>
                             <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="0e1-lE-B4e" secondAttribute="trailing" constant="20" id="yKy-FP-85Z"/>
+                            <constraint firstItem="0e1-lE-B4e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ipm-AO-AjH" secondAttribute="trailing" constant="8" symbolic="YES" id="zXG-Ge-lEJ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -150,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MqR-kb-dqM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="793.84615384615381" y="-34.123222748815166"/>
+            <point key="canvasLocation" x="798" y="-34"/>
         </scene>
     </scenes>
     <resources>
