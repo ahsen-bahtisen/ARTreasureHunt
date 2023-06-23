@@ -111,7 +111,7 @@ protocol LocationManagerDelegate: AnyObject {
     //MARK: Methods
       func addObject(treasure: Treasure, location: CLLocation) {
           let distanceInMeters = userLocation?.distance(from: location) ?? 0
-          if distanceInMeters == 1000 {
+          if distanceInMeters <= 1000 {
               treasure.loadModel()
               
               guard let treasureNode = treasure.treasureNode else { return }
