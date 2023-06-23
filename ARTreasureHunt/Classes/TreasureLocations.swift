@@ -14,6 +14,7 @@ class TreasureLocations {
 
     init() {
         locations = [
+            CLLocationCoordinate2D(latitude: 38.7194111800447, longitude: 35.514434174711106),
             CLLocationCoordinate2D(latitude: 41.262690, longitude: 34.981751),
             CLLocationCoordinate2D(latitude: 39.230658, longitude: 36.332275),
             CLLocationCoordinate2D(latitude: 39.792139, longitude: 32.632191),
