@@ -22,7 +22,7 @@ class TreasureLocations {
             CLLocationCoordinate2D(latitude: 36.351571, longitude: 32.880717)
         ]
         
-        // Rastgele koordinatlara dönüştür
+        // Convert to random coordinates
         locations = randomCoordinates(locations)
     }
     
@@ -30,7 +30,7 @@ class TreasureLocations {
         var randomizedCoordinates = [CLLocationCoordinate2D]()
         
         for coordinate in coordinates {
-            // Rastgele küçük bir sapma ekleyerek yeni bir koordinat oluştur
+            // Generate a new coordinate by adding a random small offset
             let latitude = coordinate.latitude + Double.random(in: -0.01...0.01)
             let longitude = coordinate.longitude + Double.random(in: -0.01...0.01)
             

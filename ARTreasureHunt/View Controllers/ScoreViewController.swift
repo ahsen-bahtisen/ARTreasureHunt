@@ -19,7 +19,7 @@ class ScoreViewController: UIViewController {
         let score = defaults.integer(forKey: "UserScore")
         let treasureCount = defaults.integer(forKey: "TreasureCount")
         
-        // Skoru ve hazine sayısını görüntüle
+        // View score and number of treasures
         scoreLabel.text = "\(score)"
         treasureCountLabel.text = "X\(treasureCount)"
     }
