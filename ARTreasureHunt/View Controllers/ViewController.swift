@@ -5,7 +5,7 @@
 //  Created by Ahsen Bahtışen on 14.06.2023.
 //
 
- import UIKit
+import UIKit
  import SceneKit
  import ARKit
  import CoreLocation
@@ -98,6 +98,14 @@ protocol LocationManagerDelegate: AnyObject {
         
         locationManager.stopUpdatingLocation()
     }
+
+      var userLocation: CLLocation?
+
+      func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+          if userLocation == nil {
+              userLocation = locations.first
+          }
+      }
 
     
     //MARK: Methods

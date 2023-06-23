@@ -42,10 +42,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A226E9B2A45945100D18E65 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7A4ABC162A39A5F3007A9A6F /* Assets.xcassets */,
+				7A4ABC0F2A39A5F2007A9A6F /* art.scnassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7A226E9C2A45951200D18E65 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A4ABC112A39A5F2007A9A6F /* ViewController.swift */,
+				7A8FC9DD2A456EC000D9919A /* ScoreViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7A226E9D2A45953600D18E65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A8FC98C2A40A6F300D9919A /* Treasure.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7A226E9E2A45955A00D18E65 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A4ABC132A39A5F2007A9A6F /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A226E9F2A45957000D18E65 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7A8FC9DB2A455EBE00D9919A /* TreasureLocations.swift */,
+				7A8FC9D92A45542000D9919A /* LocationManager.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		7A4ABC012A39A5F2007A9A6F = {
 			isa = PBXGroup;
 			children = (
 				7A4ABC0C2A39A5F2007A9A6F /* ARTreasureHunt */,
+				7A4ABC0D2A39A5F2007A9A6F /* AppDelegate.swift */,
 				7A4ABC0B2A39A5F2007A9A6F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,15 +105,11 @@
 		7A4ABC0C2A39A5F2007A9A6F /* ARTreasureHunt */ = {
 			isa = PBXGroup;
 			children = (
-				7A4ABC0D2A39A5F2007A9A6F /* AppDelegate.swift */,
-				7A4ABC0F2A39A5F2007A9A6F /* art.scnassets */,
-				7A4ABC112A39A5F2007A9A6F /* ViewController.swift */,
-				7A8FC9DD2A456EC000D9919A /* ScoreViewController.swift */,
-				7A8FC9DB2A455EBE00D9919A /* TreasureLocations.swift */,
-				7A8FC9D92A45542000D9919A /* LocationManager.swift */,
-				7A8FC98C2A40A6F300D9919A /* Treasure.swift */,
-				7A4ABC132A39A5F2007A9A6F /* Main.storyboard */,
-				7A4ABC162A39A5F3007A9A6F /* Assets.xcassets */,
+				7A226E9F2A45957000D18E65 /* Classes */,
+				7A226E9C2A45951200D18E65 /* View Controllers */,
+				7A226E9D2A45953600D18E65 /* Model */,
+				7A226E9E2A45955A00D18E65 /* Views */,
+				7A226E9B2A45945100D18E65 /* Resources */,
 			);
 			path = ARTreasureHunt;
 			sourceTree = "<group>";
